@@ -7,11 +7,9 @@
 */
 
 
-
 /* 
     2. On ne peut pas déclarer de const vide, contrairement à let ou var.
 */
-
 
 
 
