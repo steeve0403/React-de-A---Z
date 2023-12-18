@@ -17,19 +17,38 @@
     Si elles ne sont pas appelées par un objet, this est automatiquement égal à window (l'objet global).
 
     Les fonctions fléchées ne créent pas de this, néanmoins elles peuvent lire le this d'une fonction classique si elles se situent dedans.
-    Si elles ne sont pas dans l'environnement(donc contexte) une fonction classique, elle lisent le this de l'objet global, car elles sont dans le contexte d'execution global.
+    Si elles ne sont pas dans l'environnement(donc contexte) une fonction classique, elles lisent le this de l'objet général, car elles sont dans le contexte d'execution global.
 */
 
+const person= {
+    age: 45,
+    getAge: function () {
+        const arrowInsideClassic = () => {
+            console.log("From Arrow", this)
+        }
+        arrowInsideClassic()
+        return this
+    },
+    getArrowAge: () => {
+        return this
+    },
+}
 
-
+console.log(person.getAge());
+console.log(person.getArrowAge());
 
 /* 
     3. arguments
     Même chose pour l'objet "arguments" qui est crée chez les fonctions classiques, mais pas les fonctions fléchées.
 */
 
+function faz() {
+    console.log(arguments)
+}
 
-
+const foz = () => {
+    console.log(arguments)
+}
 
 /*
     Petit recap pour vous aider avec la valeur de this dans des fonctions classiques vs fléchées (hors fonction constructeur / usestrict)
