@@ -49,7 +49,7 @@ function faz() {
 const foz = () => {
     console.log(arguments)
 }
-
+suppersjkdv:Bvkemb
 /*
     Petit recap pour vous aider avec la valeur de this dans des fonctions classiques vs fléchées (hors fonction constructeur / usestrict)
 
