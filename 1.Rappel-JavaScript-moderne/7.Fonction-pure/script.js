@@ -7,4 +7,14 @@
 
 */
 
+function add(a, b) {
+    return a + b
+}
 
+console.log(add(10, 10))
+
+function getFinalPrice(price, VAT) {
+    return price * (100 + VAT) / 100
+}
+
+console.log(getFinalPrice(100, 20))
