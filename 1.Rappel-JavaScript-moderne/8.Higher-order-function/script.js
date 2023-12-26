@@ -1,18 +1,31 @@
 /* 
     1. Fonction d'ordre supérieur.
 
-    Les fonctions d'ordre supérieur sont des fonctions qui vont soit recevoir une fonction callback en argument soit retourner une fonction, ou les deux à la fois !
+    Les fonctions d'ordre supérieur sont des fonctions qui vont soit recevoir
+    une fonction callback en argument,
+    soit retourner une fonction,
+    ou les deux à la fois !
 
-    Cela ouvre la voie à de nombreuses solutions et à une plus grande fléxibilité.
+    Cela ouvre la voie à de nombreuses
+    solutions et à une plus grande flexibility.
 */
 
 
+function customFilter(arr, callback) {
+
+    const filteredArray = []
+
+    for(let i = 0; i < arr.length; i++) {
+        if(callback(arr[i])) {
+            filteredArray.push(arr[i])
+        }
+    }
+    return filteredArray
+}
+
 const salaries = [1200,5000,4000,2500,3450,1800]
 
-
-
-
-
+console.log(customFilter(salaries, salary => salary > 3000))
 
 
 
@@ -43,4 +56,8 @@ const countries = [
       gdp: 1988
   },
 ]
+
+console.log(customFilter(countries, country => country.gdp >= 2000))
+console.log(customFilter(countries, country => country.gdp < 3000))
+console.log(customFilter(countries, country => country.gdp >= 1000))
 
