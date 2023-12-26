@@ -83,6 +83,9 @@ const lessThan180 = heights.filter(height => height < 180)
 
 const marks = [18,5,17,12,20,16,14]
 
+const average = marks.reduce((acc, marks) => acc + mark, 0) /   marks.length
+
+console.log(average.toFixed(2))
 
 /* 
     5. Array.prototype.sort(callback(firstEl, secondEl))
@@ -98,20 +101,24 @@ const marks = [18,5,17,12,20,16,14]
     base
     [10,4,12]
 
-    étape 1
+    Étape 1
     |partie triée|
     [|4,10|,12]
 
-    étape 2
+    Étape 2
     Si 12 est plus grand que 10 il est à sa place, fin du tri.
     [|4,10,12|]
 */
 
 const letters = ["z","b","a","d","e"];
 
+letters.sort(letters)
+
 
 const numbers2 = [10,55,2,250,500,85]
 
+numbers2.sort((a, b) => a - b)
+console.log(numbers2)
 
 // On peut aussi trier des tableaux d'objets
 const store = [
@@ -129,3 +136,4 @@ const store = [
     },
 ]
 
+store.sort((a, b) =>a.price - b.price)
