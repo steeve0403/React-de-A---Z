@@ -5,9 +5,14 @@
 //  Rajouter une fonction classique
 
 const obj = {
-
+  feature(){
+    console.log("hello world")
+  },
+  arrow: () => {
+    console.log("FF")
+  }
 }
-
+obj.feature()
 
 // Rajouter des propriétés facilement.
 
@@ -16,7 +21,9 @@ const age = 24;
 
 // création de propriété
 const user = {
-
+  userName: userName,
+  userName,
+  age
 }
 console.log(user);
 
