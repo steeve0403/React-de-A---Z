@@ -12,9 +12,9 @@
 /* 
     1. Array.prototype.forEach(callback(element, index, array))
 
-    Définition: Exécute une fonction callback sur chaque élément d'un tableau.
+    Définition : Exécute une fonction callback sur chaque élément d'un tableau.
     
-    La callback est TOUJOURS appelée avec TOUS les paramètres.
+    La callback est TOUJOURS appelée avec TOUS les arguments qui correspondent aux paramètres.
     C'est au dev de choisir celui ou ceux qu'il veut utiliser.
 
     Valeur de retour : undefined
@@ -23,13 +23,13 @@
 
 const numbers = [1,2,3,4,5,6]
 
-
+// numbers.forEach((num, index, array) => console.log(num, index, array))
 
 
 /* 
     2. Array.prototype.map(callback(element, index, array))
     
-    Définition: Permet de retourner un nouveau tableau contenant les résultats du retour d'une fonction callback appelée sur chaque élément d'un tableau.
+    Définition : Permet de retourner un nouveau tableau contenant les résultats du retour d'une fonction callback appelée sur chaque élément d'un tableau.
 
 
     Valeur de retour : un nouveau tableau contenant le retour de chaque appel de la fonction callback.
@@ -50,7 +50,8 @@ const people = [
     age: 27
   }
 ]
-
+const names = people.map(people => people.name)
+// console.log(names)
 
 /* 
     3. Array.prototype.filter(callback(el, index, array))
@@ -63,18 +64,20 @@ const people = [
 
 const heights = [170,185,198,162,187,155,178,207,201,189]
 
+const lessThan180 = heights.filter(height => height < 180)
+// console.log(lessThan180)
 
 
 /* 
     4. Array.prototype.reduce(callback(accumulator, currentValue, currentIndex, array), valeurInitiale)
 
-    Définition: Accumule chaque valeur d'un tableau à une valeur initiale.
+    Définition : Accumule chaque valeur d'un tableau à une valeur initiale.
     Si une valeur initiale n'est pas fournie, le premier élément du tableau est utilisé.
     
     Exemples : Permet de faire des moyennes, d'accumuler des valeurs et de résoudre toutes sortes de problèmes.
 
 
-    Valeur de retour: l'accumulateur après toutes les opérations.
+    Valeur de retour : l'accumulateur après toutes les opérations.
 
 */
 
@@ -84,7 +87,7 @@ const marks = [18,5,17,12,20,16,14]
 /* 
     5. Array.prototype.sort(callback(firstEl, secondEl))
 
-    Définition: Permet de trier des chaînes de caractères, des nombres, des objets, etc...
+    Définition : Permet de trier des chaînes de caractères, des nombres, des objets, etc...
 
     Valeur de retour : Le même tableau trié.
 
