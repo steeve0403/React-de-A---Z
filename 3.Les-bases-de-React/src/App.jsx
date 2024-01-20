@@ -1,4 +1,4 @@
-import Container from "./lessons/7.Créer-une-liste/Container.jsx";
+import Container from "./lessons/8.Utiliser-des-images/Container.jsx";
 function App() {
 
   return (
