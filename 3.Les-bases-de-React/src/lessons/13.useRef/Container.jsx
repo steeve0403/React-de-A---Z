@@ -12,8 +12,9 @@ export default function Container() {
         countRef.current++
         console.log(countRef.current)
     }
+    // console.log("Mise à jour")
 
-    console.log("Mise à jour")
+    const txtRef = useRef()
   return (
     <div>
       <h1>Comprendre les refs</h1>
@@ -21,6 +22,8 @@ export default function Container() {
         <p>Valeur de la ref {countRef.current}</p>
         <button onClick={handleCountRef}>Incrémenter la ref</button>
         <button onClick={() => setState(state +1)}>Incrémenter le state</button>
+
+        <p ref={txtRef}>Lorem ipsum dolor sit amet.</p>
     </div>
   )
 }
