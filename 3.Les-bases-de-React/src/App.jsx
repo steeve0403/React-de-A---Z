@@ -1,4 +1,4 @@
-import Container from "./lessons/8.Utiliser-des-images/Container.jsx";
+import Container from "./lessons/10.Opérateur-ternaire/Container.jsx";
 function App() {
 
   return (
