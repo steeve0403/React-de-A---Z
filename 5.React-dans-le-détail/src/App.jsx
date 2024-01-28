@@ -1,4 +1,4 @@
-import Container from "./lessons/6.Appeler-une-API/Container.jsx";
+import Container from "./lessons/7.Utiliser-un-observateur/Container.jsx";
 function App() {
 
   return (
