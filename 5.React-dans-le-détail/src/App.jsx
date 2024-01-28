@@ -1,4 +1,4 @@
-import Container from "./lessons/7.Utiliser-un-observateur/Container.jsx";
+import Container from "./lessons/8.Utiliser-setInterval/Container.jsx";
 function App() {
 
   return (
