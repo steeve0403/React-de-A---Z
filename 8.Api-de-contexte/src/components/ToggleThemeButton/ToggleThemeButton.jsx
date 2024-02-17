@@ -1,7 +1,7 @@
 import sun from "../../assets/sun.svg"
-import "./ToggleTheme.css"
+import "./ToggleThemeButton.css"
 
-export default function ToggleTheme() {
+export default function ToggleThemeButton() {
     return (
         <button
             className="toggle-theme-btn"

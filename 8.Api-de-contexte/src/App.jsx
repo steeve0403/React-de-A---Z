@@ -1,10 +1,10 @@
 import Content from "./components/Content/Content.jsx";
-import ToggleTheme from "./components/ToggleTheme/ToggleTheme.jsx";
+import ToggleThemeButton from "./components/ToggleThemeButton/ToggleThemeButton.jsx";
 
 function App() {
   return (
     <>
-        <ToggleTheme />
+        <ToggleThemeButton />
         <Content />
     </>
   )
