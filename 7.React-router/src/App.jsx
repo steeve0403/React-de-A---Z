@@ -3,11 +3,13 @@ import Home from "./components/Home.jsx"
 import Contact from "./components/Contact.jsx"
 import UserProfile from "./components/UserProfile.jsx"
 import NotFound from "./components/NotFound.jsx"
+import Navbar from "./components/Navbar.jsx";
 
 function App() {
   return (
     <>
       <BrowserRouter>
+          <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
