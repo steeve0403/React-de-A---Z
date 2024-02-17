@@ -15,6 +15,8 @@ export default function Validation() {
         passwordConfirmation: false
     })
 
+    // console.log(inputStates)
+
     function handleSubmit(e) {
         e.preventDefault()
 
@@ -48,6 +50,13 @@ export default function Validation() {
         } else {
             areValid.passwordConfirmation = true
             setShowValidation(state => ({...state, passwordConfirmation: false}))
+        }
+        // console.log(areValid)
+        // console.log(Object.values(areValid).every(value => value))
+        if (Object.values(areValid).every(value => value)) {
+            return true
+        } else {
+            return false
         }
     }
 

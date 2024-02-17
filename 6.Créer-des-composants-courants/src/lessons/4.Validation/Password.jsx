@@ -17,6 +17,11 @@ export default function Password({inputsStates, setInputsStates, showValidation 
                 onChange={e => setInputsStates({...inputsStates,
                     password: e.target.value})}
             />
+            {showValidation.password && (
+                <p className="text-red-400 font-semibold">
+                    At least 1 number and 6 characters.
+                </p>
+            )}
         </>
     )
 }

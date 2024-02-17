@@ -17,6 +17,11 @@ export default function Confirmation({inputsStates, setInputsStates, showValidat
                 onChange={e => setInputsStates({...inputsStates,
                     passwordConfirmation: e.target.value})}
             />
+            {showValidation.passwordConfirmation && (
+                <p className="text-red-400 font-semibold">
+                    Passwords are not the same.
+                </p>
+            )}
         </>
     )
 }
