@@ -1,7 +1,9 @@
+import Content from "./components/Content/Content.jsx";
+
 function App() {
   return (
     <>
-
+        <Content />
     </>
   )
 }
