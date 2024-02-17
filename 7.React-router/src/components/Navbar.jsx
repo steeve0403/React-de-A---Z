@@ -5,10 +5,16 @@ export default function Navbar(){
         <nav className="p-2 text-center bg-slate-300">
             <NavLink
                 to="/"
-                className={({isActive}) => `${isActive && "bg-red-800"} mx-2 text-md text-semibold`}>
+                /*className={({isActive}) => `${isActive && "bg-red-800"}
+                mx-2 text-md text-semibold`}*/
+                className="mx-2 text-md text-semibold"
+            >
                 Home
             </NavLink>
             <Link
+                to="/analytics" className="mx-2 text-md text-semibold">
+                Analytics
+            </Link><Link
                 state={{txt: "State"}}
                 to="/contact" className="mx-2 text-md text-semibold">
                 Contact
