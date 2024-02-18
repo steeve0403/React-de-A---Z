@@ -4,13 +4,15 @@ import fruits from "./features/fruits.js"
 import fruitsCart from "./features/fruitsCart.js";
 import {logger} from "redux-logger/src";
 import users from "./features/users.js";
+import chrono from "./features/chrono.js";
 
 export const store = configureStore({
     reducer: {
         counter,
         fruits,
         fruitsCart,
-        users
+        users,
+        chrono,
     },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware().
     concat(logger)
