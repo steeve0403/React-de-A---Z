@@ -9,5 +9,25 @@ export const store = configureStore({
         fruits,
         fruitsCart,
     },
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().
+    concat()
 })
 
+// function customMiddleware(store) {
+//     return function (next){
+//         return function (action){
+//             // console.log(store.getState())
+//             // console.log(next)
+//             // console.log(action)
+//             next({
+//                 type: "fruitsCart/addOne",
+//                 payload:{
+//                     name: "Mango",
+//                     url: "/images/mango.jpg",
+//                     price: 999,
+//                     id: 65237894
+//                 },
+//             })
+//         }
+//     }
+// }
