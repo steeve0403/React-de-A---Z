@@ -2,6 +2,7 @@ import {configureStore} from "@reduxjs/toolkit";
 import counter from "./features/counter.js";
 import fruits from "./features/fruits.js"
 import fruitsCart from "./features/fruitsCart.js";
+import {logger} from "redux-logger/src";
 
 export const store = configureStore({
     reducer: {
@@ -10,7 +11,7 @@ export const store = configureStore({
         fruitsCart,
     },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware().
-    concat()
+    concat(logger)
 })
 
 // function customMiddleware(store) {
