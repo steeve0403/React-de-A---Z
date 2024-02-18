@@ -5,7 +5,7 @@ import {addOne, removeOne} from "../../features/fruitsCart.js";
 export default function Fruity() {
     const fruitsList = useSelector(state => state.fruits)
     const dispatch = useDispatch()
-
+    console.log(addOne())
     return (
         <>
             <h1 className="text-4xl text-slate-100 font-bold">
