@@ -6,7 +6,7 @@ export default function CounterResults() {
     return (
         <>
             <h1 className="text-slate-100 text-3xl">
-                Counter value: {counter}
+                Counter value: {counter.value}
             </h1>
         </>
     )
