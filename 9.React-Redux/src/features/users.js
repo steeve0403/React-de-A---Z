@@ -16,7 +16,7 @@ export const users = createSlice({
             state.loading = false
         },
         addLoader: (state, action) => {
-            state.loading = false
+            state.loading = true
         },
         addError: (state, action) => {
             state.error = true
@@ -30,6 +30,7 @@ export function getData(action) {
         dispatch(addLoader())
         fetch("https://jsonplaceholder.typicode.com/users")
             .then(response => {
+                if (!response.ok) throw new Error()
                 return response.json()
             })
             .then(data => dispatch(addData(data)))
