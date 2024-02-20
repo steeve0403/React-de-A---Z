@@ -6,5 +6,5 @@ export default function Footer() {
                 Boxy - All right reserved ©
             </p>
         </footer>
-    );
+    )
 }
