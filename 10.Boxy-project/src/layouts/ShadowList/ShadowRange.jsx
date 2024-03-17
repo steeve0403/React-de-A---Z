@@ -1,15 +1,14 @@
 import { useDispatch } from "react-redux"
 import { updateShadowValue } from "../../features/shadows"
-import {updateBoxValue} from "../../features/boxProperties.js";
 
-export default function ShadowRange({inputData, shadowId}) {
+export default function ShadowRange({inputData, shadowID}) {
     const dispatch = useDispatch()
 
     function handleInputs(e) {
         dispatch(updateShadowValue({
             inputNumber: inputData.inputNumber,
             value: e.target.value,
-            shadowId
+            shadowID
         }))
     }
 

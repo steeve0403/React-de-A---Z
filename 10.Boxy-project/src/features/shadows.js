@@ -100,6 +100,8 @@ export const shadowsSlice = createSlice({
             currentInput.value = action.payload.value
         },
         updateCheckbox: (state, action) => {
+            const currentShadow = state.find(shadow => shadow.id === action.payload.shadowID)
+            currentShadow[action.payload.name] = !currentShadow[action.payload.name]
         },
     }
 })

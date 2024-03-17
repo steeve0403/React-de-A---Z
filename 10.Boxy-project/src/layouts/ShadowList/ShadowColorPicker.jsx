@@ -1,14 +1,14 @@
 import { useDispatch } from "react-redux"
 import {updateShadowValue} from "../../features/shadows"
 
-export default function ShadowColorPicker({inputData, shadowId}) {
+export default function ShadowColorPicker({inputData, shadowID}) {
     const dispatch = useDispatch()
 
     function handleInputs(e) {
         dispatch(updateShadowValue({
             inputNumber: inputData.inputNumber,
             value: e.target.value,
-            shadowId
+            shadowID
         }))
     }
     return (
