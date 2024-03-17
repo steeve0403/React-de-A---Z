@@ -1,10 +1,23 @@
+import { useState } from "react"
+import { createPortal } from "react-dom"
+import ModalResult from "./ModalResult.jsx"
 
 export default function ModalBtn() {
+    const [showModal, setShowModal] = useState(false)
     return (
-        <div className="relative z-0 mx-auto mt-2 py-1 px-3 text-sm rounded cursor-pointer">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                Get the code
+        <>
+            <button
+                onClick={() => setShowModal(!showModal)}
+                className="relative z-0 mx-auto mt-2 mb-2 py-1 px-3 text-sm rounded cursor-pointer
+                            bg-blue-600 hover:bg-blue-700 text-white"
+            >
+                    Get the code
             </button>
-        </div>
+            {showModal &&
+                createPortal(
+                    <ModalResult closeModal={() => setShowModal(!showModal)} />,
+                    document.body
+            )}
+        </>
     )
 }
