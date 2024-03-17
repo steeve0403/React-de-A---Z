@@ -1,8 +1,32 @@
 import {useSelector} from "react-redux"
+import { useEffect } from "react"
 import getBoxShadowValue from "../../../utils/getBoxShadowValue"
 
 export default function ModalResult({closeModal}) {
     const shadowValues = useSelector(state => state.shadows)
+
+    useEffect(() => {
+        document.body.style.overflow = "hidden"
+        return () => {
+            document.body.style.overflow = "auto"
+        }
+    }, [])
+
+    let runningAnimation = false
+    function handleCopy(e) {
+        if (!runningAnimation) {
+            runningAnimation = true
+            e.target.textContent = "Copied !"
+
+            setTimeout(() => {
+                e.target.textContent = "Copy"
+                runningAnimation = false
+            }, 1000)
+        }
+
+        navigator.clipboard.writeText(`box-shadow: ${getBoxShadowValue(shadowValues)}`)
+    }
+
     return (
         <div
             onClick={closeModal}
@@ -14,6 +38,7 @@ export default function ModalResult({closeModal}) {
                 <div className="flex items-end mb-5">
                     <p className="font-semibold mr-5">Here is your code:</p>
                     <button
+                        onClick={handleCopy}
                         className="ml-auto mr-2 text-sm bg-blue-600 text-white hover:bg-blue-700 py-1 px-3 rounded">
                         Copy
                     </button>
