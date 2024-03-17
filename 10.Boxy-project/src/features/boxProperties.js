@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { nanoid } from 'nanoid'
 
 const initialState = [
             {
@@ -7,7 +6,6 @@ const initialState = [
                 name: "Border radius",
                 value: 25,
                 type: "range",
-                slice: "borderProperties",
                 minMax: [0, 250]
             },
             {
@@ -15,7 +13,6 @@ const initialState = [
                 name: "Height",
                 value: 250,
                 type: "range",
-                slice: "borderProperties",
                 minMax: [0, 500]
             },
             {
@@ -23,7 +20,6 @@ const initialState = [
                 name: "Width",
                 value: 250,
                 type: "range",
-                slice: "borderProperties",
                 minMax: [0, 500]
             },
             {
@@ -31,7 +27,6 @@ const initialState = [
                 name: "Background color",
                 value: "FFFFFF",
                 type: "color",
-                slice: "borderProperties",
             },
 ]
 
