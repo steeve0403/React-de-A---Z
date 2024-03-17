@@ -95,7 +95,7 @@ export const shadowsSlice = createSlice({
             })
         },
         updateShadowValue: (state, action) => {
-            const currentShadow = state.find(shadow => shadow.id === action.payload.shadowId)
+            const currentShadow = state.find(shadow => shadow.id === action.payload.shadowID)
             const currentInput = currentShadow.inputs.find(input => input.inputNumber === action.payload.inputNumber)
             currentInput.value = action.payload.value
         },
