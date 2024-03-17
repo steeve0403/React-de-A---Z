@@ -39,10 +39,9 @@ export default function Shadow({panelNumber, shadow}) {
                         style={{transform: toggleShadow ? "rotate(90deg)" : "rotate(0deg)"}}
                         className="font-bold w-5"
                         src={chevron} alt=""/>
-
             </button>
             {toggleShadow && <>
-                <div className="flex items-end px-6 py-4">
+                <div className="flex items-end px-6 pt-4">
                     <ShadowCheckbox name={"active"} shadowID={shadow.id} />
                     <ShadowCheckbox name={"inset"} shadowID={shadow.id} />
                     <button

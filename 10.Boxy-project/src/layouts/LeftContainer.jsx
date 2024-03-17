@@ -25,7 +25,7 @@ export default function LeftContainer() {
                     </button>
                 ))}
             </div>
-            <div>
+            <div className="h-full overflow-auto">
                 {tabsList[tabs].component}
             </div>
         </div>
